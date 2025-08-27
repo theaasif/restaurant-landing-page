@@ -1,0 +1,328 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*Navbar*/
+header {
+  background: #ff4d4d;
+
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .logo img {
+  width: 120px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+header nav ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+  color: #333;
+}
+header nav ul li a:hover {
+  color: yellow;
+}
+/*hero section*/
+.hero {
+  height: 100vh;
+  background: url(/img/hero.jpg) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px black;
+}
+.hero .btn {
+  padding: 12px 30px;
+  background: yellow;
+  color: black;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+/*about section*/
+.about {
+  padding: 80px 50px;
+  text-align: center;
+}
+.about h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+}
+/*menu*/
+.menu {
+  padding: 80px 50px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.menu h2 {
+  font-size: 35px;
+  margin-bottom: 40px;
+  color: #ff4d4d;
+}
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.menu-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.menu-item:hover {
+  transform: scale(1.05);
+}
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.menu-item h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+.menu-item p {
+  color: #777;
+  padding: 0 10px 20px;
+}
+
+/*contact section*/
+.contact {
+  padding: 80px 50px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.contact button {
+  padding: 12px;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact button:hover {
+  background: #cc0000;
+}
+/*footer*/
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .hero .btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  .about,
+  .menu,
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .menu-items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .contact form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 15px;
+  }
+
+  header .logo img {
+    width: 90px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .about h2,
+  .menu h2,
+  .contact h2 {
+    font-size: 26px;
+  }
+
+  .about p,
+  .menu-item p {
+    font-size: 14px;
+  }
+
+  .menu-item h3 {
+    font-size: 18px;
+  }
+
+  .menu-item img {
+    height: 160px;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact button {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero h1 {
+    font-size: 64px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+
+  .hero .btn {
+    padding: 16px 40px;
+    font-size: 20px;
+  }
+
+  .menu-item img {
+    height: 280px;
+  }
+
+  .menu-item h3 {
+    font-size: 24px;
+  }
+
+  .menu-item p {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 20px;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact button {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
