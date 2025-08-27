@@ -46,7 +46,7 @@ header nav ul li a:hover {
 /*hero section*/
 .hero {
   height: 100vh;
-  background: url(/img/hero.jpg) no-repeat center center/cover;
+  background: url(https://res.cloudinary.com/dwxwacdji/image/upload/v1756299839/hero_buekum.jpg) no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
